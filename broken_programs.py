@@ -24,9 +24,19 @@
 #     if x < 2:
 #         return False
 #     else:
-#         for n in range(2, x-1):
+#         for n in range(2, x):
 #             if x % n == 0:
 #                 return False
-#             return True
-# print(is_prime(7))
+#         return True
+# print(is_prime(2))
 
+#Exercise 4
+item_list = ["Burger", "Hotdog", "Bun", "Ketchup", "Cheese"]
+n = 0
+
+while n < 4:
+    for i in item_list:
+        print(item_list[n])
+        n+=1
+
+print(item_list*4) 
