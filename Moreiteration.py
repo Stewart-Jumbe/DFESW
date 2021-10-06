@@ -1,3 +1,5 @@
+import pdb
+pdb.set_trace()
 ########Palindrom 
 
 # word=input('Enter word that will be checked: ')
@@ -40,6 +42,7 @@
 #         print('* ', end="")
 #     print('')
 ######################
+
 
 ####Understanding nested for loops
 #find 5 factorial
