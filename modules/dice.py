@@ -1,3 +1,3 @@
 from random import randint
-def dice():
+def throw():
     return randint(1,6)

@@ -51,3 +51,7 @@ for i in range(5,0,-1):
          i=i*j
 print(f'i*j is a {i}')
 
+#5 factorial using 1 for loop
+num =5
+
+

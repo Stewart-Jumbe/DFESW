@@ -37,10 +37,12 @@
 ####Exercise
 
 
+#Write a while loop which asks for the names of 5 people, 
+# and for each person prints their name followed 
+# by the text "is awesome!
+#count = 0
 
-count = 0
-
-while count <= 4:
-    name1 = input("please enter name: ")
-    print(f'{name1} is Awesome')
-    count +=1
+#while count <= 4:
+#    name1 = input("please enter name: ")
+#    print(f'{name1} is Awesome')
+#    count +=1
