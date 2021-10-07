@@ -1,0 +1,59 @@
+def roman_numeral_generator(self, theNum):
+
+        myNum = theNum
+
+        RNum = ""
+
+        while myNum >= 1000:
+
+            RNum = RNum + "M"
+
+            myNum = myNum-1000
+
+        while myNum >= 500:
+
+            RNum = RNum + "D"
+
+            myNum = myNum - 500
+
+        while myNum >= 100:
+
+            RNum = RNum + "C"
+
+            myNum = myNum-100
+
+        while myNum >= 50:
+
+            RNum = RNum + "L"
+
+            myNum = myNum - 50
+
+        while myNum >= 10:
+
+            RNum = RNum + "X"
+
+            myNum = myNum - 10
+
+        while myNum >= 5:
+
+            RNum = RNum + "V"
+
+            myNum = myNum -5
+
+        while myNum > 0:
+
+            RNum = RNum + "I"
+
+            myNum = myNum - 1
+
+        #print(RNum)
+
+        #indOf40 = RNum.find("XXXX")
+
+        RNum = RNum.replace("CCCC", "CD")
+
+        RNum = RNum.replace("XXXX", "XL") 
+
+        RNum = RNum.replace("IIII", "IV")
+
+        return RNum 
