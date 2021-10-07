@@ -1,27 +1,34 @@
 class Letters:
 
     #vowels ='aeiou'#vowel attribute
-
-    def __init__(self):# I dont need vowels to be in this as its not a changable attribute 
-     
-        self.vowels = ['a','e','i','o','u']
+    #Attribute
+    def __init__(self,letterChecker):# 
+        self.letterChecker = letterChecker.lower() #inputs given when objects are created will be made to be lower case
+        # self.vowels = ['a','e','i','o','u']
         
+    #Method
+    def checker(self,x):
+        return x.lower() in self.letterChecker
+            
+    # def vowelcheck(self,x):
 
-    
-    
-    def vowelcheck(self,x):
-
-        #ch
-        if x.isalpha() and x.lower() in self.vowels: 
-            return f"True, {x} is a vowel"
-        elif x.isalpha() and x.lower() not in self.vowels:
-            return f"False,{x} is not a vowel"
-        else: False
-
-
+        
+    #     if x.isalpha() and x.lower() in self.vowels: 
+    #         return f"True, {x} is a vowel"
+    #     elif x.isalpha() and x.lower() not in self.vowels:
+    #         return f"False,{x} is not a vowel"
+    #     else: False
 
 
 #creating object
-word = Letters()
+vowels = Letters('aeiou') # input will be fed to ".letterChecker" part of the method 
+curvedLetters = Letters('COS')
 
-print(word.vowelcheck('a'))
+#outputs
+print(vowels.checker('a'))
+print(curvedLetters.checker('O'))
+
+# using a for loop to check multiple things at the same time
+for letter in 'HelloMyNameIsStewart':
+    print(vowels.checker(letter))
+    print(curvedLetters.checker(letter))
