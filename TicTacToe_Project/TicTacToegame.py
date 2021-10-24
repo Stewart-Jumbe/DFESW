@@ -134,10 +134,12 @@ def spaceCheck(board,gridPos):
         status= "Position already filled"
     return status
 
+import pdb
+pdb.set_trace()
 ##run test to check if the above works
 
 #7. Function to check whether theirs empty space on the board
-board=['#','O','X','','X','O','O','O','O','O']
+board=['#','O','X','X','X','O','O','O','O','O']
 
 def fullBoardCheck():
     #if board is full there should be no empty spaces
