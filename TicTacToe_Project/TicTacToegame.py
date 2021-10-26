@@ -127,15 +127,19 @@ def choosePlayer():
 #Testing choosePlayer function
 print(choosePlayer())
 
+board=['#','O','X','X','X','O','O','O','O','O']
 #6. function to check if grid position is empty or filled
 def spaceCheck(board,gridPos):
 
     if board[gridPos]!= "":
         status= "Position already filled"
+        
     return status
+print(spaceCheck(board, gridPos))
 
-import pdb
-pdb.set_trace()
+
+#import pdb
+#pdb.set_trace()
 ##run test to check if the above works
 
 #7. Function to check whether theirs empty space on the board
@@ -146,3 +150,30 @@ def fullBoardCheck():
     return board.count("")== 0
 print(fullBoardCheck())
 
+#8 Writing a function that asks for a player's net position (1-9) and 
+# then checks if its empty(calling spaceCheck function), if it is then 
+# the position is returned for future use 
+
+def playerGripPosCheck (num):
+    numberedBoard= ['#',1,2,3,4,5,6,7,8,9]
+    displayBoard(numberedBoard)
+    
+    #acceptable values
+    validInput = [num for num in range(1,10)]
+    
+    #player grid symbol
+    global nextGridPos # used to determine where player symbol should be placed
+    nextGridPos = '10'# should be 1 to 9 to exit while
+    spaceChecker =
+    while nextGridPos not in validInput:
+        
+        nextGridPos= int(input('Please choose one grid position from 1 to 9: '))
+        spaceCheck(board,nextGridPos)
+        
+        clear()#avoids long list of incorrect inputs
+        
+        #error message for incorrect input
+        if nextGridPos not in validInput:
+            print(f"{nextGridPos} is not a valid input, enter new grid position 1 to 9: ")
+    
+    return nextGridPos
